@@ -6,6 +6,8 @@
 //  Copyright © 2016年 yoowei. All rights reserved.
 //
 
+// 此类封装请求参数与返回结果，结果可转为model，也可直接使用字典
+
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
 
@@ -45,7 +47,7 @@ typedef NS_ENUM(NSInteger, WYRequestPriority) {
 
 
 //将WYBaseRequest返回来备用
-typedef void(^WYSuccessBlock)(WYBaseRequest * _Nonnull request,id _Nullable responseObject);
+typedef void(^WYSuccessBlock)(WYBaseRequest * _Nonnull  request,id _Nullable responseObject);
 typedef void(^WYFailureBlock)(WYBaseRequest * _Nullable request,NSError *_Nonnull error);
 typedef void(^ConstructionBlock)(id<AFMultipartFormData> _Nonnull formData);
 typedef void(^UploadProgressBlock)(NSProgress * _Nonnull progress);
@@ -68,19 +70,19 @@ typedef void(^UploadProgressBlock)(NSProgress * _Nonnull progress);
 // request config
 @property (nonatomic, strong,nullable) NSURLSessionTask *requestTask;
 @property (nonatomic, assign) WYRequestPriority requestPriority;
+@property (nonatomic, assign) WYBaseRequestSerializerType requestSerializerType;
 @property (nonatomic, assign) WYBaseRequestMethod method;
 @property (nonatomic, copy,nullable) NSString *requestBaseUrl;
 @property (nonatomic, copy,nullable) NSString *requestUrl;
-@property (nonatomic, strong,nullable) NSDictionary *parameters;
-@property (nonatomic, strong,nullable) NSDictionary *headers;
-@property (nonatomic, assign) WYBaseRequestSerializerType requestSerializerType;
+@property (nonatomic, copy,nullable) NSDictionary *parameters;
+@property (nonatomic, copy,nullable) NSDictionary *headers;
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 @property (nonatomic, strong, readonly,nullable) NSURL *url;
 
 // response
 @property (nonatomic, assign) WYBaseResponseSerializerType responseSerializerType;
-@property (nonatomic, strong,nullable) NSIndexSet *acceptableStatusCodes;
-@property (nonatomic, strong,nullable) NSSet<NSString *> *acceptableContentTypes;
+@property (nonatomic, copy,nullable) NSIndexSet *acceptableStatusCodes;
+@property (nonatomic, copy,nullable) NSSet<NSString *> *acceptableContentTypes;
 
 
 // callback

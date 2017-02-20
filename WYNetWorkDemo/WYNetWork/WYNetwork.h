@@ -12,5 +12,6 @@
 #import "WYBaseRequest.h"
 #import "WYNetworkConfig.h"
 #import "WYHttpConnection.h"
+#import "WYDownLoadManager.h"
 
 #endif /* WYNetwork_h */

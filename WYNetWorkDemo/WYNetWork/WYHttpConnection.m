@@ -223,7 +223,7 @@ static const char kBaseRequestConnectionKey;
 }
 
 - (id)tryToParseData:(id)responseData {
-    //这个以后要优化
+    //这个解析以后要进行重新优化
     if ([responseData isKindOfClass:[NSData class]]) {
         // 尝试解析成JSON
         if (responseData == nil) {

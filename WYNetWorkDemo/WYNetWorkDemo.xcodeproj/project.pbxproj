@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46A7DA1EC139EED83C27BC43 /* libPods-WYNetWorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */; };
 		6F350AACE61B5A376087E0DA /* libPods-WYNetWorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */; };
+		BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */; };
 		BAE0B0031E56C18E005969F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0021E56C18E005969F7 /* main.m */; };
 		BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0051E56C18E005969F7 /* AppDelegate.m */; };
 		BAE0B0091E56C18E005969F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0081E56C18E005969F7 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 		962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FCC3E8D40700E8DCEBACAB /* Pods-WYNetWorkDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemoUITests/Pods-WYNetWorkDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA46F4C81E5AE0430083EAAB /* WYDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDownLoadManager.h; sourceTree = "<group>"; };
+		BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
 		BAE0AFFE1E56C18E005969F7 /* WYNetWorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNetWorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE0B0021E56C18E005969F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAE0B0041E56C18E005969F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,15 +203,17 @@
 		BAE0B0341E56D167005969F7 /* WYNetWork */ = {
 			isa = PBXGroup;
 			children = (
+				BAE0B0391E56D167005969F7 /* WYNetwork.h */,
 				BAE0B0351E56D167005969F7 /* WYBaseRequest.h */,
 				BAE0B0361E56D167005969F7 /* WYBaseRequest.m */,
-				BAE0B0371E56D167005969F7 /* WYHttpConnection.h */,
-				BAE0B0381E56D167005969F7 /* WYHttpConnection.m */,
-				BAE0B0391E56D167005969F7 /* WYNetwork.h */,
-				BAE0B03A1E56D167005969F7 /* WYNetworkConfig.h */,
-				BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */,
 				BAE0B03C1E56D167005969F7 /* WYNetworkManager.h */,
 				BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */,
+				BAE0B0371E56D167005969F7 /* WYHttpConnection.h */,
+				BAE0B0381E56D167005969F7 /* WYHttpConnection.m */,
+				BA46F4C81E5AE0430083EAAB /* WYDownLoadManager.h */,
+				BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */,
+				BAE0B03A1E56D167005969F7 /* WYNetworkConfig.h */,
+				BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */,
 				BAE0B03E1E56D167005969F7 /* WYRequestHeadTool.h */,
 				BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */,
 			);
@@ -505,6 +510,7 @@
 				BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */,
 				BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */,
 				BAE0B0411E56D167005969F7 /* WYHttpConnection.m in Sources */,
+				BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */,
 				BAE0B0441E56D167005969F7 /* WYRequestHeadTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

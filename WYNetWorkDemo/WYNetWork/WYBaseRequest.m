@@ -39,6 +39,7 @@
 - (BOOL)isShouldEncode {
     return NO;
 }
+
 - (NSURL *)url{
     NSString *urlString = self.requestUrl;
     if (self.requestBaseUrl.length > 0) {

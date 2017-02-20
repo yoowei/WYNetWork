@@ -14,7 +14,7 @@
 
 // 每个request都会加上的headers
 
-@property (nonatomic, strong) NSDictionary *additionalHeaders;
+@property (nonatomic, copy) NSDictionary *additionalHeaders;
 
 @property (nonatomic, assign) NSTimeInterval defaultTimeoutInterval;
 

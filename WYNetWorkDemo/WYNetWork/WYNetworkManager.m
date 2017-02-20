@@ -109,6 +109,7 @@
 //成功的结果返回过来了？
 #pragma mark - 处理网络返回数据
 - (void)processConnection:(WYHttpConnection *)connection withResponseJsonObject:(id)responseJsonObjet{
+    
     WYBaseRequest *request = connection.request;
       if (nil != responseJsonObjet && ![[responseJsonObjet objectForKey:@"result"] isKindOfClass:[NSDictionary class]]) {
         int state = [[responseJsonObjet objectForKey:@"result"] intValue];
