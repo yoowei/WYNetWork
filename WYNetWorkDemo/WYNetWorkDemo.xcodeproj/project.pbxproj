@@ -10,6 +10,7 @@
 		46A7DA1EC139EED83C27BC43 /* libPods-WYNetWorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */; };
 		6F350AACE61B5A376087E0DA /* libPods-WYNetWorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */; };
 		BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */; };
+		BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */; };
 		BAE0B0031E56C18E005969F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0021E56C18E005969F7 /* main.m */; };
 		BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0051E56C18E005969F7 /* AppDelegate.m */; };
 		BAE0B0091E56C18E005969F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0081E56C18E005969F7 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		B0FCC3E8D40700E8DCEBACAB /* Pods-WYNetWorkDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemoUITests/Pods-WYNetWorkDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BA46F4C81E5AE0430083EAAB /* WYDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDownLoadManager.h; sourceTree = "<group>"; };
 		BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
+		BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTestRequest.h; sourceTree = "<group>"; };
+		BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTestRequest.m; sourceTree = "<group>"; };
 		BAE0AFFE1E56C18E005969F7 /* WYNetWorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNetWorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE0B0021E56C18E005969F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAE0B0041E56C18E005969F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +138,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA46F4CB1E5AE4040083EAAB /* test */ = {
+			isa = PBXGroup;
+			children = (
+				BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */,
+				BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */,
+			);
+			name = test;
+			sourceTree = "<group>";
+		};
 		BAE0AFF51E56C18E005969F7 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +173,7 @@
 		BAE0B0001E56C18E005969F7 /* WYNetWorkDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BA46F4CB1E5AE4040083EAAB /* test */,
 				BAE0B0041E56C18E005969F7 /* AppDelegate.h */,
 				BAE0B0051E56C18E005969F7 /* AppDelegate.m */,
 				BAE0B0071E56C18E005969F7 /* ViewController.h */,
@@ -506,6 +519,7 @@
 				BAE0B0091E56C18E005969F7 /* ViewController.m in Sources */,
 				BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */,
 				BAE0B0401E56D167005969F7 /* WYBaseRequest.m in Sources */,
+				BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */,
 				BAE0B0031E56C18E005969F7 /* main.m in Sources */,
 				BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */,
 				BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */,

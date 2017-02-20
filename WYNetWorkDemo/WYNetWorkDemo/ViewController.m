@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "WYTestRequest.h"
+#import "WYDownLoadManager.h"
 
 @interface ViewController ()
 
@@ -16,8 +18,61 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+  UIButton *testBtn=  [UIButton buttonWithType:UIButtonTypeCustom];
+  testBtn.frame=CGRectMake(100, 200, 100, 100);
+  [testBtn setTitle:@"点击测试" forState:UIControlStateNormal];
+    [testBtn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+  [testBtn addTarget:self action:@selector(downTest) forControlEvents:UIControlEventTouchDown];
+ [self.view addSubview:testBtn];
+    
 }
+
+-(void)downTest{
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    //要监控网络连接状态，必须要先调用单例的startMonitoring方法
+    [manager startMonitoring];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status==AFNetworkReachabilityStatusReachableViaWiFi) {
+            [self downFromServer];
+        }
+    }];
+}
+- (void)downFromServer{
+    
+    NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+   
+    [WYDownLoadManager  downloadWithUrl:@"http://www.baidu.com/img/bdlogo.png" saveToPath:cachesPath progress:^(int64_t bytesRead, int64_t totalBytesRead) {
+        
+        NSLog(@"%f",1.0 * bytesRead / totalBytesRead);
+
+        
+    } success:^(id success) {
+        
+         NSLog(@"address success obj:%@",success);
+        
+    } failure:^(NSError *error) {
+        
+         NSLog(@"address error obj:%@",error);
+        
+    }];
+}
+
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    [[[WYTestRequest alloc]init] startWithSuccess:^(WYBaseRequest * _Nonnull request, id  _Nullable responseObject) {
+        
+         NSLog(@"address success obj:%@",responseObject);
+        
+    } failure:^(WYBaseRequest * _Nullable request, NSError * _Nonnull error) {
+         NSLog(@"address request error:%@",error);
+    }];
+
+}
+
+
 
 
 - (void)didReceiveMemoryWarning {

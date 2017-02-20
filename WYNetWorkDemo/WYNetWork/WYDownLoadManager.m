@@ -120,9 +120,6 @@ static NSMutableArray *wy_requestTasks;
                                success:(WYResponseSuccess)success
                                failure:(WYResponseFail)failure {
     
-//    测试
-//  NSURL *URL = [NSURL URLWithString:@"http://www.baidu.com/img/bdlogo.png"];
-    
     NSURL *URL = [NSURL URLWithString:url];
     NSURLRequest *downloadRequest= [NSURLRequest requestWithURL:URL];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
