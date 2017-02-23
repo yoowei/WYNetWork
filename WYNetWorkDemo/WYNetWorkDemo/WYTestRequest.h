@@ -6,7 +6,7 @@
 //  Copyright © 2017年 yoowei. All rights reserved.
 //
 
-#import "WYBaseRequest.h"
+#import "WYNetwork.h"
 
 @interface WYTestRequest : WYBaseRequest
 

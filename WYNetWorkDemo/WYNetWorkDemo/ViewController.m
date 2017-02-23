@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "WYNetwork.h"
 #import "WYTestRequest.h"
-#import "WYDownLoadManager.h"
 
 @interface ViewController ()
 
@@ -42,43 +42,33 @@
     
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
    
-    [WYDownLoadManager  downloadWithUrl:@"http://www.baidu.com/img/bdlogo.png" saveToPath:cachesPath progress:^(int64_t bytesRead, int64_t totalBytesRead) {
+    [[WYDownLoadManager sharedManager]  downloadWithUrl:@"http://www.baidu.com/img/bdlogo.png" saveToPath:cachesPath progress:^(int64_t bytesRead, int64_t totalBytesRead) {
         
         NSLog(@"%f",1.0 * bytesRead / totalBytesRead);
 
         
     } success:^(id success) {
         
-         NSLog(@"address success obj:%@",success);
+         NSLog(@"responseObject success obj:%@",success);
         
     } failure:^(NSError *error) {
         
-         NSLog(@"address error obj:%@",error);
+         NSLog(@"responseObject error obj:%@",error);
         
     }];
 }
-
-
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-
     [[[WYTestRequest alloc]init] startWithSuccess:^(WYBaseRequest * _Nonnull request, id  _Nullable responseObject) {
         
-         NSLog(@"address success obj:%@",responseObject);
+         NSLog(@"responseObject success obj:%@",responseObject);
         
     } failure:^(WYBaseRequest * _Nullable request, NSError * _Nonnull error) {
-         NSLog(@"address request error:%@",error);
+         NSLog(@"responseObject request error:%@",error);
     }];
-
 }
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-
 @end

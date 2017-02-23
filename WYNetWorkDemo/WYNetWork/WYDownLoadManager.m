@@ -22,7 +22,7 @@ static NSMutableArray *wy_requestTasks;
     return _instance;
 }
 
-+ (NSMutableArray *)allTasks {
+- (NSMutableArray *)allTasks {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (wy_requestTasks == nil) {
@@ -33,7 +33,7 @@ static NSMutableArray *wy_requestTasks;
     return wy_requestTasks;
 }
 
-+ (void)cancelAllRequest {
+- (void)cancelAllRequest {
     @synchronized(self) {
         [[self allTasks] enumerateObjectsUsingBlock:^(NSURLSessionDownloadTask * _Nonnull task, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([task isKindOfClass:[NSURLSessionDownloadTask class]]) {
@@ -44,7 +44,7 @@ static NSMutableArray *wy_requestTasks;
     };
 }
 
-+ (void)cancelRequestWithURL:(NSString *)url {
+- (void)cancelRequestWithURL:(NSString *)url {
     if (url == nil) {
         return;
     }
@@ -61,7 +61,7 @@ static NSMutableArray *wy_requestTasks;
 }
 
 
-+ (void)stopDownloadWithUrl: (NSString *)url{
+- (void)stopDownloadWithUrl: (NSString *)url{
 
     if (url == nil) {
         return;
@@ -77,7 +77,7 @@ static NSMutableArray *wy_requestTasks;
     };
 }
 
-+ (void)startDownloadWithUrl: (NSString*)url{
+- (void)startDownloadWithUrl: (NSString*)url{
     
     if (url == nil) {
         return;
@@ -94,7 +94,7 @@ static NSMutableArray *wy_requestTasks;
 
 }
 
-+ (void)stopDownloadAllRequest{
+- (void)stopDownloadAllRequest{
     @synchronized(self) {
         [[self allTasks] enumerateObjectsUsingBlock:^(NSURLSessionDownloadTask * _Nonnull task, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([task isKindOfClass:[NSURLSessionDownloadTask class]]) {
@@ -104,7 +104,7 @@ static NSMutableArray *wy_requestTasks;
   };
 }
 
-+ (void)startDownloadAllRequest{
+- (void)startDownloadAllRequest{
     @synchronized(self) {
         [[self allTasks] enumerateObjectsUsingBlock:^(NSURLSessionDownloadTask * _Nonnull task, NSUInteger idx, BOOL * _Nonnull stop) {
             if ([task isKindOfClass:[NSURLSessionDownloadTask class]]) {
@@ -114,7 +114,7 @@ static NSMutableArray *wy_requestTasks;
     };
 }
 
-+ (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url
+- (NSURLSessionDownloadTask *)downloadWithUrl:(NSString *)url
                             saveToPath:(NSString *)saveToPath
                               progress:(WYDownloadProgress)progressBlock
                                success:(WYResponseSuccess)success
@@ -166,9 +166,6 @@ static NSMutableArray *wy_requestTasks;
 //        UIImage *img = [UIImage imageWithContentsOfFile:imgFilePath];
 //        self.imageView.image = img;
 
-        
-        
-        
         @synchronized(self) {//万一有很多操作呢？
         [[self allTasks] removeObject:session];
         }
@@ -192,7 +189,7 @@ static NSMutableArray *wy_requestTasks;
     return session;
 }
 
-+ (void)handleCallbackWithError:(NSError *)error fail:(WYResponseFail)fail {
+- (void)handleCallbackWithError:(NSError *)error fail:(WYResponseFail)fail {
     if (fail) {
         fail(error);
     }
