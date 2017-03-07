@@ -9,7 +9,7 @@
 #import "WYPublicTableViewController.h"
 #import "WYPublicWeiboViewModel.h"
 #import "WYPublicStatusCell.h"
-#import "SVProgressHUD.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface WYPublicTableViewController ()
 @property (strong, nonatomic) NSArray *publicModelArray;

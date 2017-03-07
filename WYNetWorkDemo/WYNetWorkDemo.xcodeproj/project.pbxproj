@@ -12,8 +12,6 @@
 		BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */; };
 		BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */; };
 		BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */; };
-		BA63B6DE1E67FD6700EBE4D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */; };
-		BA63B6DF1E67FD6700EBE4D5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */; };
 		BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */; };
 		BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6F21E68036000EBE4D5 /* WYPublicStatusModel.m */; };
 		BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6F81E68174900EBE4D5 /* WYPublicRequest.m */; };
@@ -69,9 +67,6 @@
 		BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTestRequest.m; sourceTree = "<group>"; };
 		BA63B69A1E67FC6600EBE4D5 /* WYPublicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicTableViewController.h; sourceTree = "<group>"; };
 		BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicTableViewController.m; sourceTree = "<group>"; };
-		BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		BA63B6C11E67FD6700EBE4D5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		BA63B6EB1E68020300EBE4D5 /* WYPublicStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicStatusCell.h; sourceTree = "<group>"; };
 		BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicStatusCell.m; sourceTree = "<group>"; };
 		BA63B6F11E68036000EBE4D5 /* WYPublicStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicStatusModel.h; sourceTree = "<group>"; };
@@ -183,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				BAE552261E6EBD3200501C50 /* other */,
-				BA63B6AA1E67FD6700EBE4D5 /* Vendor */,
 				BA63B6921E67FC6600EBE4D5 /* Model */,
 				BA63B6951E67FC6600EBE4D5 /* ViewController */,
 				BA63B69E1E67FC6600EBE4D5 /* ViewModel */,
@@ -223,25 +217,6 @@
 				BA63B7001E69160700EBE4D5 /* WYBaseViewModel.m */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BA63B6AA1E67FD6700EBE4D5 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				BA63B6BF1E67FD6700EBE4D5 /* SVProgressHUD */,
-			);
-			name = Vendor;
-			path = ../Vendor;
-			sourceTree = "<group>";
-		};
-		BA63B6BF1E67FD6700EBE4D5 /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */,
-				BA63B6C11E67FD6700EBE4D5 /* SVProgressHUD.h */,
-				BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		BAE0AFF51E56C18E005969F7 = {
@@ -474,7 +449,6 @@
 				BAE0B0111E56C18F005969F7 /* LaunchScreen.storyboard in Resources */,
 				BAE5522B1E6EBD3200501C50 /* homeBusiness.geojson in Resources */,
 				BAE0B00E1E56C18F005969F7 /* Assets.xcassets in Resources */,
-				BA63B6DE1E67FD6700EBE4D5 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,7 +615,6 @@
 				BAE0B0091E56C18E005969F7 /* WYViewController.m in Sources */,
 				BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */,
 				BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */,
-				BA63B6DF1E67FD6700EBE4D5 /* SVProgressHUD.m in Sources */,
 				BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */,
 				BAE5522E1E6EBD7900501C50 /* NSString+Extension.m in Sources */,
 				BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */,
