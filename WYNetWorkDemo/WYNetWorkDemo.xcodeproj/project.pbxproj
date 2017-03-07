@@ -11,10 +11,17 @@
 		6F350AACE61B5A376087E0DA /* libPods-WYNetWorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */; };
 		BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */; };
 		BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */; };
+		BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */; };
+		BA63B6DE1E67FD6700EBE4D5 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */; };
+		BA63B6DF1E67FD6700EBE4D5 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */; };
+		BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */; };
+		BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6F21E68036000EBE4D5 /* WYPublicStatusModel.m */; };
+		BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6F81E68174900EBE4D5 /* WYPublicRequest.m */; };
+		BA63B6FE1E69145100EBE4D5 /* WYPublicWeiboViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6FD1E69145100EBE4D5 /* WYPublicWeiboViewModel.m */; };
+		BA63B7011E69160700EBE4D5 /* WYBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B7001E69160700EBE4D5 /* WYBaseViewModel.m */; };
 		BAE0B0031E56C18E005969F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0021E56C18E005969F7 /* main.m */; };
 		BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0051E56C18E005969F7 /* AppDelegate.m */; };
-		BAE0B0091E56C18E005969F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0081E56C18E005969F7 /* ViewController.m */; };
-		BAE0B00C1E56C18F005969F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE0B00A1E56C18F005969F7 /* Main.storyboard */; };
+		BAE0B0091E56C18E005969F7 /* WYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0081E56C18E005969F7 /* WYViewController.m */; };
 		BAE0B00E1E56C18F005969F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE0B00D1E56C18F005969F7 /* Assets.xcassets */; };
 		BAE0B0111E56C18F005969F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE0B00F1E56C18F005969F7 /* LaunchScreen.storyboard */; };
 		BAE0B01C1E56C18F005969F7 /* WYNetWorkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B01B1E56C18F005969F7 /* WYNetWorkDemoTests.m */; };
@@ -24,6 +31,10 @@
 		BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */; };
 		BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */; };
 		BAE0B0441E56D167005969F7 /* WYRequestHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */; };
+		BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE552211E6EAE0700501C50 /* WYPublicDetailViewController.m */; };
+		BAE5522A1E6EBD3200501C50 /* hello.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE552281E6EBD3200501C50 /* hello.png */; };
+		BAE5522B1E6EBD3200501C50 /* homeBusiness.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BAE552291E6EBD3200501C50 /* homeBusiness.geojson */; };
+		BAE5522E1E6EBD7900501C50 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE5522D1E6EBD7900501C50 /* NSString+Extension.m */; };
 		C3472D8A59DCF8CB2E3EB561 /* libPods-WYNetWorkDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D9DD6B3FA2E159497DEE832 /* libPods-WYNetWorkDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -56,13 +67,27 @@
 		BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
 		BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTestRequest.h; sourceTree = "<group>"; };
 		BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTestRequest.m; sourceTree = "<group>"; };
+		BA63B69A1E67FC6600EBE4D5 /* WYPublicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicTableViewController.h; sourceTree = "<group>"; };
+		BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicTableViewController.m; sourceTree = "<group>"; };
+		BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		BA63B6C11E67FD6700EBE4D5 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		BA63B6EB1E68020300EBE4D5 /* WYPublicStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicStatusCell.h; sourceTree = "<group>"; };
+		BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicStatusCell.m; sourceTree = "<group>"; };
+		BA63B6F11E68036000EBE4D5 /* WYPublicStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicStatusModel.h; sourceTree = "<group>"; };
+		BA63B6F21E68036000EBE4D5 /* WYPublicStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicStatusModel.m; sourceTree = "<group>"; };
+		BA63B6F71E68174900EBE4D5 /* WYPublicRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicRequest.h; sourceTree = "<group>"; };
+		BA63B6F81E68174900EBE4D5 /* WYPublicRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicRequest.m; sourceTree = "<group>"; };
+		BA63B6FC1E69145100EBE4D5 /* WYPublicWeiboViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicWeiboViewModel.h; sourceTree = "<group>"; };
+		BA63B6FD1E69145100EBE4D5 /* WYPublicWeiboViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicWeiboViewModel.m; sourceTree = "<group>"; };
+		BA63B6FF1E69160700EBE4D5 /* WYBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseViewModel.h; sourceTree = "<group>"; };
+		BA63B7001E69160700EBE4D5 /* WYBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseViewModel.m; sourceTree = "<group>"; };
 		BAE0AFFE1E56C18E005969F7 /* WYNetWorkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNetWorkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE0B0021E56C18E005969F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAE0B0041E56C18E005969F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BAE0B0051E56C18E005969F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		BAE0B0071E56C18E005969F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BAE0B0081E56C18E005969F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		BAE0B00B1E56C18F005969F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAE0B0071E56C18E005969F7 /* WYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYViewController.h; sourceTree = "<group>"; };
+		BAE0B0081E56C18E005969F7 /* WYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYViewController.m; sourceTree = "<group>"; };
 		BAE0B00D1E56C18F005969F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAE0B0101E56C18F005969F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAE0B0121E56C18F005969F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +108,13 @@
 		BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
 		BAE0B03E1E56D167005969F7 /* WYRequestHeadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRequestHeadTool.h; sourceTree = "<group>"; };
 		BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRequestHeadTool.m; sourceTree = "<group>"; };
+		BAE552201E6EAE0700501C50 /* WYPublicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicDetailViewController.h; sourceTree = "<group>"; };
+		BAE552211E6EAE0700501C50 /* WYPublicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicDetailViewController.m; sourceTree = "<group>"; };
+		BAE552271E6EBD3200501C50 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		BAE552281E6EBD3200501C50 /* hello.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hello.png; sourceTree = "<group>"; };
+		BAE552291E6EBD3200501C50 /* homeBusiness.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = homeBusiness.geojson; sourceTree = "<group>"; };
+		BAE5522C1E6EBD7900501C50 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		BAE5522D1E6EBD7900501C50 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		E15D32A353E75DB8205E8678 /* Pods-WYNetWorkDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemoUITests/Pods-WYNetWorkDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F15065D31E3865A6BEB87125 /* Pods-WYNetWorkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemo/Pods-WYNetWorkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,13 +170,78 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BA46F4CB1E5AE4040083EAAB /* test */ = {
+		BA46F4CB1E5AE4040083EAAB /* requestTest */ = {
 			isa = PBXGroup;
 			children = (
 				BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */,
 				BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */,
 			);
-			name = test;
+			name = requestTest;
+			sourceTree = "<group>";
+		};
+		BA63B6911E67FBED00EBE4D5 /* MVVMtest */ = {
+			isa = PBXGroup;
+			children = (
+				BAE552261E6EBD3200501C50 /* other */,
+				BA63B6AA1E67FD6700EBE4D5 /* Vendor */,
+				BA63B6921E67FC6600EBE4D5 /* Model */,
+				BA63B6951E67FC6600EBE4D5 /* ViewController */,
+				BA63B69E1E67FC6600EBE4D5 /* ViewModel */,
+				BAE552231E6EAF4600501C50 /* request */,
+			);
+			path = MVVMtest;
+			sourceTree = "<group>";
+		};
+		BA63B6921E67FC6600EBE4D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B6F11E68036000EBE4D5 /* WYPublicStatusModel.h */,
+				BA63B6F21E68036000EBE4D5 /* WYPublicStatusModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA63B6951E67FC6600EBE4D5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B69A1E67FC6600EBE4D5 /* WYPublicTableViewController.h */,
+				BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */,
+				BA63B6EB1E68020300EBE4D5 /* WYPublicStatusCell.h */,
+				BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */,
+				BAE552201E6EAE0700501C50 /* WYPublicDetailViewController.h */,
+				BAE552211E6EAE0700501C50 /* WYPublicDetailViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BA63B69E1E67FC6600EBE4D5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B6FC1E69145100EBE4D5 /* WYPublicWeiboViewModel.h */,
+				BA63B6FD1E69145100EBE4D5 /* WYPublicWeiboViewModel.m */,
+				BA63B6FF1E69160700EBE4D5 /* WYBaseViewModel.h */,
+				BA63B7001E69160700EBE4D5 /* WYBaseViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BA63B6AA1E67FD6700EBE4D5 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B6BF1E67FD6700EBE4D5 /* SVProgressHUD */,
+			);
+			name = Vendor;
+			path = ../Vendor;
+			sourceTree = "<group>";
+		};
+		BA63B6BF1E67FD6700EBE4D5 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B6C01E67FD6700EBE4D5 /* SVProgressHUD.bundle */,
+				BA63B6C11E67FD6700EBE4D5 /* SVProgressHUD.h */,
+				BA63B6C21E67FD6700EBE4D5 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		BAE0AFF51E56C18E005969F7 = {
@@ -173,12 +270,12 @@
 		BAE0B0001E56C18E005969F7 /* WYNetWorkDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BA46F4CB1E5AE4040083EAAB /* test */,
+				BA63B6911E67FBED00EBE4D5 /* MVVMtest */,
+				BA46F4CB1E5AE4040083EAAB /* requestTest */,
 				BAE0B0041E56C18E005969F7 /* AppDelegate.h */,
 				BAE0B0051E56C18E005969F7 /* AppDelegate.m */,
-				BAE0B0071E56C18E005969F7 /* ViewController.h */,
-				BAE0B0081E56C18E005969F7 /* ViewController.m */,
-				BAE0B00A1E56C18F005969F7 /* Main.storyboard */,
+				BAE0B0071E56C18E005969F7 /* WYViewController.h */,
+				BAE0B0081E56C18E005969F7 /* WYViewController.m */,
 				BAE0B00D1E56C18F005969F7 /* Assets.xcassets */,
 				BAE0B00F1E56C18F005969F7 /* LaunchScreen.storyboard */,
 				BAE0B0121E56C18F005969F7 /* Info.plist */,
@@ -231,6 +328,28 @@
 				BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */,
 			);
 			path = WYNetWork;
+			sourceTree = "<group>";
+		};
+		BAE552231E6EAF4600501C50 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				BA63B6F71E68174900EBE4D5 /* WYPublicRequest.h */,
+				BA63B6F81E68174900EBE4D5 /* WYPublicRequest.m */,
+			);
+			name = request;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BAE552261E6EBD3200501C50 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				BAE5522C1E6EBD7900501C50 /* NSString+Extension.h */,
+				BAE5522D1E6EBD7900501C50 /* NSString+Extension.m */,
+				BAE552271E6EBD3200501C50 /* Config.h */,
+				BAE552281E6EBD3200501C50 /* hello.png */,
+				BAE552291E6EBD3200501C50 /* homeBusiness.geojson */,
+			);
+			path = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -351,9 +470,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE5522A1E6EBD3200501C50 /* hello.png in Resources */,
 				BAE0B0111E56C18F005969F7 /* LaunchScreen.storyboard in Resources */,
+				BAE5522B1E6EBD3200501C50 /* homeBusiness.geojson in Resources */,
 				BAE0B00E1E56C18F005969F7 /* Assets.xcassets in Resources */,
-				BAE0B00C1E56C18F005969F7 /* Main.storyboard in Resources */,
+				BA63B6DE1E67FD6700EBE4D5 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,13 +637,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAE0B0091E56C18E005969F7 /* ViewController.m in Sources */,
+				BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */,
+				BAE0B0091E56C18E005969F7 /* WYViewController.m in Sources */,
+				BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */,
 				BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */,
+				BA63B6DF1E67FD6700EBE4D5 /* SVProgressHUD.m in Sources */,
+				BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */,
+				BAE5522E1E6EBD7900501C50 /* NSString+Extension.m in Sources */,
+				BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */,
+				BA63B6FE1E69145100EBE4D5 /* WYPublicWeiboViewModel.m in Sources */,
 				BAE0B0401E56D167005969F7 /* WYBaseRequest.m in Sources */,
 				BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */,
 				BAE0B0031E56C18E005969F7 /* main.m in Sources */,
+				BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */,
 				BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */,
 				BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */,
+				BA63B7011E69160700EBE4D5 /* WYBaseViewModel.m in Sources */,
 				BAE0B0411E56D167005969F7 /* WYHttpConnection.m in Sources */,
 				BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */,
 				BAE0B0441E56D167005969F7 /* WYRequestHeadTool.m in Sources */,
@@ -561,14 +691,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BAE0B00A1E56C18F005969F7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BAE0B00B1E56C18F005969F7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BAE0B00F1E56C18F005969F7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -677,8 +799,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K24NT5QZL;
 				INFOPLIST_FILE = WYNetWorkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yoowei.WYNetWorkDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = yoowei.yooweiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -690,8 +813,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5K24NT5QZL;
 				INFOPLIST_FILE = WYNetWorkDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yoowei.WYNetWorkDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = yoowei.yooweiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

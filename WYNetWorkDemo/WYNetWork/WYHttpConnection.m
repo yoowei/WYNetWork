@@ -70,7 +70,6 @@ static const char kBaseRequestConnectionKey;
     NSDictionary *parameters = request.parameters;
     
     __block NSURLSessionTask *dateTask = nil;
-   
     switch (request.method) {
         case WYBaseRequestMethodGet:{
             dateTask = [manager GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

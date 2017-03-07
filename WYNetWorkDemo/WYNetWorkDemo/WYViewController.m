@@ -6,19 +6,21 @@
 //  Copyright © 2017年 yoowei. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WYViewController.h"
 #import "WYNetwork.h"
 #import "WYTestRequest.h"
+#import "WYPublicTableViewController.h"
 
-@interface ViewController ()
+@interface WYViewController ()
 
 @end
 
-@implementation ViewController
+@implementation WYViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor=[UIColor whiteColor];
   UIButton *testBtn=  [UIButton buttonWithType:UIButtonTypeCustom];
   testBtn.frame=CGRectMake(100, 200, 100, 100);
   [testBtn setTitle:@"点击测试" forState:UIControlStateNormal];
@@ -26,6 +28,21 @@
   [testBtn addTarget:self action:@selector(downTest) forControlEvents:UIControlEventTouchDown];
  [self.view addSubview:testBtn];
     
+    
+    UIButton *testBtnMVVM=  [UIButton buttonWithType:UIButtonTypeCustom];
+    testBtnMVVM.frame=CGRectMake(200, 300, 100, 100);
+    [testBtnMVVM setTitle:@"MVVM测试" forState:UIControlStateNormal];
+    [testBtnMVVM setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [testBtnMVVM addTarget:self action:@selector(MVVMTest) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:testBtnMVVM];
+    
+}
+
+-(void)MVVMTest{
+
+    WYPublicTableViewController *tableVC=[[WYPublicTableViewController alloc]init];
+    [self .navigationController pushViewController:tableVC animated:YES];
+
 }
 
 -(void)downTest{
