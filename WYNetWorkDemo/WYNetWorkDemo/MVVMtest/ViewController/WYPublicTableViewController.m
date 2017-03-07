@@ -43,8 +43,8 @@
     //先来到这里，获取微博数据
     [publicViewModel fetchPublicWeiBo];
     
-    [SVProgressHUD showWithStatus:@"正在获取用户信息……" maskType:SVProgressHUDMaskTypeBlack];
-    
+    [SVProgressHUD showWithStatus:@"正在获取用户信息……"];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
 }
 
 - (void)didReceiveMemoryWarning {
