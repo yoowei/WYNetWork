@@ -22,4 +22,9 @@
 
 @property (nonatomic, strong) NSSet *defaultAcceptableContentTypes;
 
+// Request base URL, such as "http://www.baidu.com". Default is empty string.
+@property (nonatomic, strong) NSString *baseUrl;
+// Request CDN URL. Default is empty string.
+@property (nonatomic, strong) NSString *cdnUrl;
+
 @end

@@ -66,6 +66,7 @@ typedef void(^UploadProgressBlock)(NSProgress * _Nonnull progress);
 @property (nonatomic, assign, getter=isCancelling)   BOOL cancelling;
 //是否URLEncode，采用UTF-8编码
 @property (nonatomic, assign, getter=isShouldEncode) BOOL shouldEncode;
+@property (nonatomic, assign, getter=isUseCDN) BOOL useCDN;
 
 // request config
 @property (nonatomic, strong,nullable) NSURLSessionTask *requestTask;
@@ -78,6 +79,9 @@ typedef void(^UploadProgressBlock)(NSProgress * _Nonnull progress);
 @property (nonatomic, copy,nullable) NSDictionary *headers;
 @property (nonatomic, assign) NSTimeInterval timeoutInterval;
 @property (nonatomic, strong, readonly,nullable) NSURL *url;
+
+///  Request CDN URL. Default is empty string.
+@property (nonatomic, strong) NSString * _Nullable cdnUrl;
 
 // response
 @property (nonatomic, assign) WYBaseResponseSerializerType responseSerializerType;

@@ -19,6 +19,8 @@
     return _instance;
 }
 - (void)setDefault{
+    self.baseUrl = @"";
+    self.cdnUrl = @"";
     self.additionalHeaders = @{};
     self.defaultTimeoutInterval = 25;
     self.defaultAcceptableStatusCodes  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];

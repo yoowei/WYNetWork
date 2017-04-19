@@ -27,5 +27,14 @@
 -(WYBaseRequestMethod)method{
     return WYBaseRequestMethodGet;
 }
+
+// 假如使用cdn
+- (BOOL)isUseCDN {
+    return YES;
+}
+- (NSString *)cdnUrl {
+    return @"http://fen.bi";
+}
+
 @end
 

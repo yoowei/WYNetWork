@@ -10,18 +10,25 @@
 #import "WYNetworkManager.h"
 #import "WYHttpConnection.h"
 #import "WYRequestHeadTool.h"
+#import "WYNetworkConfig.h"
 
 @interface WYBaseRequest()
 
 @end
 
-@implementation WYBaseRequest
+@implementation WYBaseRequest{
+
+WYNetworkConfig *_config;
+}
 
 // request config
 - (WYBaseRequestMethod)method{
     return WYBaseRequestMethodPost;
 }
 - (NSString *)requestBaseUrl{
+    return @"";
+}
+- (NSString *)cdnUrl {
     return @"";
 }
 - (NSString *)requestUrl{
@@ -39,12 +46,30 @@
 - (BOOL)isShouldEncode {
     return NO;
 }
+- (BOOL)isUseCDN {
+    return NO;
+}
 
 - (NSURL *)url{
-    NSString *urlString = self.requestUrl;
-    if (self.requestBaseUrl.length > 0) {
-        urlString = [NSURL URLWithString:urlString relativeToURL:[NSURL URLWithString:self.requestBaseUrl]].absoluteString;
+    
+    NSString *baseUrl;
+    if (self.useCDN) {
+        if (self.cdnUrl.length > 0) {
+            baseUrl = self.cdnUrl;
+        } else {
+            baseUrl = _config.cdnUrl;
+        }
+    } else {
+        if (self.requestBaseUrl.length > 0) {
+            baseUrl = self.requestBaseUrl;
+        } else {
+            baseUrl = _config.baseUrl;
+        }
     }
+    
+    NSString *urlString = self.requestUrl;
+    urlString = [NSURL URLWithString:urlString relativeToURL:[NSURL URLWithString:baseUrl]].absoluteString;
+    
     return [NSURL URLWithString:urlString];
 }
 
