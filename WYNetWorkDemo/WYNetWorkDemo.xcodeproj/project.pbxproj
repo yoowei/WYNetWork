@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		46A7DA1EC139EED83C27BC43 /* libPods-WYNetWorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */; };
 		6F350AACE61B5A376087E0DA /* libPods-WYNetWorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */; };
-		BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */; };
+		BA3159D22032C6550062B9AC /* WYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C52032C6550062B9AC /* WYBaseRequest.m */; };
+		BA3159D32032C6550062B9AC /* WYNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C62032C6550062B9AC /* WYNetworkConfig.m */; };
+		BA3159D42032C6550062B9AC /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C72032C6550062B9AC /* WYNetworkManager.m */; };
+		BA3159D52032C6550062B9AC /* WYHttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159CA2032C6550062B9AC /* WYHttpConnection.m */; };
+		BA3159D62032C6550062B9AC /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */; };
+		BA3159D72032C6550062B9AC /* WYRequestHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */; };
 		BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */; };
 		BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */; };
 		BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */; };
@@ -24,11 +29,6 @@
 		BAE0B0111E56C18F005969F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE0B00F1E56C18F005969F7 /* LaunchScreen.storyboard */; };
 		BAE0B01C1E56C18F005969F7 /* WYNetWorkDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B01B1E56C18F005969F7 /* WYNetWorkDemoTests.m */; };
 		BAE0B0271E56C18F005969F7 /* WYNetWorkDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0261E56C18F005969F7 /* WYNetWorkDemoUITests.m */; };
-		BAE0B0401E56D167005969F7 /* WYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0361E56D167005969F7 /* WYBaseRequest.m */; };
-		BAE0B0411E56D167005969F7 /* WYHttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B0381E56D167005969F7 /* WYHttpConnection.m */; };
-		BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */; };
-		BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */; };
-		BAE0B0441E56D167005969F7 /* WYRequestHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */; };
 		BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE552211E6EAE0700501C50 /* WYPublicDetailViewController.m */; };
 		BAE5522A1E6EBD3200501C50 /* hello.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE552281E6EBD3200501C50 /* hello.png */; };
 		BAE5522B1E6EBD3200501C50 /* homeBusiness.geojson in Resources */ = {isa = PBXBuildFile; fileRef = BAE552291E6EBD3200501C50 /* homeBusiness.geojson */; };
@@ -61,8 +61,19 @@
 		962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FCC3E8D40700E8DCEBACAB /* Pods-WYNetWorkDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemoUITests/Pods-WYNetWorkDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BA46F4C81E5AE0430083EAAB /* WYDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDownLoadManager.h; sourceTree = "<group>"; };
-		BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
+		BA3159C52032C6550062B9AC /* WYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseRequest.m; sourceTree = "<group>"; };
+		BA3159C62032C6550062B9AC /* WYNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkConfig.m; sourceTree = "<group>"; };
+		BA3159C72032C6550062B9AC /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
+		BA3159C82032C6550062B9AC /* WYDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDownLoadManager.h; sourceTree = "<group>"; };
+		BA3159C92032C6550062B9AC /* WYRequestHeadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRequestHeadTool.h; sourceTree = "<group>"; };
+		BA3159CA2032C6550062B9AC /* WYHttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHttpConnection.m; sourceTree = "<group>"; };
+		BA3159CB2032C6550062B9AC /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
+		BA3159CC2032C6550062B9AC /* WYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseRequest.h; sourceTree = "<group>"; };
+		BA3159CD2032C6550062B9AC /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
+		BA3159CE2032C6550062B9AC /* WYNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkConfig.h; sourceTree = "<group>"; };
+		BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
+		BA3159D02032C6550062B9AC /* WYHttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHttpConnection.h; sourceTree = "<group>"; };
+		BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRequestHeadTool.m; sourceTree = "<group>"; };
 		BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTestRequest.h; sourceTree = "<group>"; };
 		BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTestRequest.m; sourceTree = "<group>"; };
 		BA63B69A1E67FC6600EBE4D5 /* WYPublicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicTableViewController.h; sourceTree = "<group>"; };
@@ -92,17 +103,6 @@
 		BAE0B0221E56C18F005969F7 /* WYNetWorkDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WYNetWorkDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE0B0261E56C18F005969F7 /* WYNetWorkDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYNetWorkDemoUITests.m; sourceTree = "<group>"; };
 		BAE0B0281E56C18F005969F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAE0B0351E56D167005969F7 /* WYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseRequest.h; sourceTree = "<group>"; };
-		BAE0B0361E56D167005969F7 /* WYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseRequest.m; sourceTree = "<group>"; };
-		BAE0B0371E56D167005969F7 /* WYHttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHttpConnection.h; sourceTree = "<group>"; };
-		BAE0B0381E56D167005969F7 /* WYHttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHttpConnection.m; sourceTree = "<group>"; };
-		BAE0B0391E56D167005969F7 /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
-		BAE0B03A1E56D167005969F7 /* WYNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkConfig.h; sourceTree = "<group>"; };
-		BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkConfig.m; sourceTree = "<group>"; };
-		BAE0B03C1E56D167005969F7 /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
-		BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
-		BAE0B03E1E56D167005969F7 /* WYRequestHeadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRequestHeadTool.h; sourceTree = "<group>"; };
-		BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRequestHeadTool.m; sourceTree = "<group>"; };
 		BAE552201E6EAE0700501C50 /* WYPublicDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicDetailViewController.h; sourceTree = "<group>"; };
 		BAE552211E6EAE0700501C50 /* WYPublicDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPublicDetailViewController.m; sourceTree = "<group>"; };
 		BAE552271E6EBD3200501C50 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -165,6 +165,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		BA3159C42032C6550062B9AC /* WYNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				BA3159C52032C6550062B9AC /* WYBaseRequest.m */,
+				BA3159C62032C6550062B9AC /* WYNetworkConfig.m */,
+				BA3159C72032C6550062B9AC /* WYNetworkManager.m */,
+				BA3159C82032C6550062B9AC /* WYDownLoadManager.h */,
+				BA3159C92032C6550062B9AC /* WYRequestHeadTool.h */,
+				BA3159CA2032C6550062B9AC /* WYHttpConnection.m */,
+				BA3159CB2032C6550062B9AC /* WYNetwork.h */,
+				BA3159CC2032C6550062B9AC /* WYBaseRequest.h */,
+				BA3159CD2032C6550062B9AC /* WYNetworkManager.h */,
+				BA3159CE2032C6550062B9AC /* WYNetworkConfig.h */,
+				BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */,
+				BA3159D02032C6550062B9AC /* WYHttpConnection.h */,
+				BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */,
+			);
+			path = WYNetWork;
+			sourceTree = "<group>";
+		};
 		BA46F4CB1E5AE4040083EAAB /* requestTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +242,7 @@
 		BAE0AFF51E56C18E005969F7 = {
 			isa = PBXGroup;
 			children = (
-				BAE0B0341E56D167005969F7 /* WYNetWork */,
+				BA3159C42032C6550062B9AC /* WYNetWork */,
 				BAE0B0001E56C18E005969F7 /* WYNetWorkDemo */,
 				BAE0B01A1E56C18F005969F7 /* WYNetWorkDemoTests */,
 				BAE0B0251E56C18F005969F7 /* WYNetWorkDemoUITests */,
@@ -283,26 +303,6 @@
 				BAE0B0281E56C18F005969F7 /* Info.plist */,
 			);
 			path = WYNetWorkDemoUITests;
-			sourceTree = "<group>";
-		};
-		BAE0B0341E56D167005969F7 /* WYNetWork */ = {
-			isa = PBXGroup;
-			children = (
-				BAE0B0391E56D167005969F7 /* WYNetwork.h */,
-				BAE0B0351E56D167005969F7 /* WYBaseRequest.h */,
-				BAE0B0361E56D167005969F7 /* WYBaseRequest.m */,
-				BAE0B03C1E56D167005969F7 /* WYNetworkManager.h */,
-				BAE0B03D1E56D167005969F7 /* WYNetworkManager.m */,
-				BAE0B0371E56D167005969F7 /* WYHttpConnection.h */,
-				BAE0B0381E56D167005969F7 /* WYHttpConnection.m */,
-				BA46F4C81E5AE0430083EAAB /* WYDownLoadManager.h */,
-				BA46F4C91E5AE0430083EAAB /* WYDownLoadManager.m */,
-				BAE0B03A1E56D167005969F7 /* WYNetworkConfig.h */,
-				BAE0B03B1E56D167005969F7 /* WYNetworkConfig.m */,
-				BAE0B03E1E56D167005969F7 /* WYRequestHeadTool.h */,
-				BAE0B03F1E56D167005969F7 /* WYRequestHeadTool.m */,
-			);
-			path = WYNetWork;
 			sourceTree = "<group>";
 		};
 		BAE552231E6EAF4600501C50 /* request */ = {
@@ -612,23 +612,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */,
+				BA3159D22032C6550062B9AC /* WYBaseRequest.m in Sources */,
 				BAE0B0091E56C18E005969F7 /* WYViewController.m in Sources */,
 				BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */,
 				BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */,
+				BA3159D42032C6550062B9AC /* WYNetworkManager.m in Sources */,
 				BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */,
+				BA3159D32032C6550062B9AC /* WYNetworkConfig.m in Sources */,
 				BAE5522E1E6EBD7900501C50 /* NSString+Extension.m in Sources */,
 				BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */,
 				BA63B6FE1E69145100EBE4D5 /* WYPublicWeiboViewModel.m in Sources */,
-				BAE0B0401E56D167005969F7 /* WYBaseRequest.m in Sources */,
 				BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */,
 				BAE0B0031E56C18E005969F7 /* main.m in Sources */,
+				BA3159D72032C6550062B9AC /* WYRequestHeadTool.m in Sources */,
+				BA3159D62032C6550062B9AC /* WYDownLoadManager.m in Sources */,
+				BA3159D52032C6550062B9AC /* WYHttpConnection.m in Sources */,
 				BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */,
-				BAE0B0431E56D167005969F7 /* WYNetworkManager.m in Sources */,
-				BAE0B0421E56D167005969F7 /* WYNetworkConfig.m in Sources */,
 				BA63B7011E69160700EBE4D5 /* WYBaseViewModel.m in Sources */,
-				BAE0B0411E56D167005969F7 /* WYHttpConnection.m in Sources */,
-				BA46F4CA1E5AE0430083EAAB /* WYDownLoadManager.m in Sources */,
-				BAE0B0441E56D167005969F7 /* WYRequestHeadTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

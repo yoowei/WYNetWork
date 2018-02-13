@@ -17,6 +17,8 @@
     NSMutableDictionary * dic = [NSMutableDictionary dictionaryWithCapacity:10];
     NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     [dic setValue:version forKey:@"version"];
+    //客户端类型
+    [dic setValue:@"iOS" forKey:@"type"];
     NSString *userAgent = [self getJsonString:dic];
     return userAgent;
 }
@@ -25,8 +27,7 @@
     NSDictionary * dic = [NSMutableDictionary dictionaryWithCapacity:10];
     NSString * userAgent = [WYRequestHeadTool userAgent];
     [dic setValue:userAgent forKey:@"User-Agent"];
-//    return dic;
-    return @{};
+    return dic;
 }
 //字典转字符存
 + (NSString *)getJsonString:(NSDictionary *)dict

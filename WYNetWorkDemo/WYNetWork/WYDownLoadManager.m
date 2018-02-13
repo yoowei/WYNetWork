@@ -8,7 +8,6 @@
 #import "WYDownLoadManager.h"
 #import <AFNetworking/AFNetworking.h>
 
-
 static NSMutableArray *wy_requestTasks;
 
 @implementation WYDownLoadManager
@@ -59,7 +58,6 @@ static NSMutableArray *wy_requestTasks;
         }];
     };
 }
-
 
 - (void)stopDownloadWithUrl: (NSString *)url{
 

@@ -14,7 +14,7 @@
 
 // 每个request都会加上的headers
 
-@property (nonatomic, copy) NSDictionary *additionalHeaders;
+@property (nonatomic, strong) NSDictionary *additionalHeaders;
 
 @property (nonatomic, assign) NSTimeInterval defaultTimeoutInterval;
 
@@ -22,9 +22,8 @@
 
 @property (nonatomic, strong) NSSet *defaultAcceptableContentTypes;
 
-// Request base URL, such as "http://www.baidu.com". Default is empty string.
 @property (nonatomic, strong) NSString *baseUrl;
-// Request CDN URL. Default is empty string.
+
 @property (nonatomic, strong) NSString *cdnUrl;
 
 @end

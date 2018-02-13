@@ -1,16 +1,15 @@
-//
+
 //  WYHttpConnection.m
-//  ZJHNetwork
+//  WYNetwork
 //
 //  Created by yoowei on 16/6/2.
-//  Copyright © 2016年 zjh. All rights reserved.
+//  Copyright © 2016年 yoowei. All rights reserved.
 //
 
 #import "WYHttpConnection.h"
 #import <AFNetworking/AFNetworking.h>
 #import <objc/runtime.h>
 #import "WYNetworkConfig.h"
-#import "WYNetworkManager.h"
 
 @implementation WYBaseRequest (WYHttpConnection)
 static const char kBaseRequestConnectionKey;
@@ -27,8 +26,6 @@ static const char kBaseRequestConnectionKey;
 @interface WYHttpConnection()
 
 @property (nonatomic, strong, readwrite) WYBaseRequest *request;
-
-@property (nonatomic, strong, readwrite) NSURLSessionTask *task;
 
 @property (nonatomic, copy) ConnectionSuccessBlock success;
 
@@ -61,25 +58,26 @@ static const char kBaseRequestConnectionKey;
     self.failure = failure;
     
     AFHTTPSessionManager *manager =[self sessionManager:request];
+    
     NSString *urlString = request.url.absoluteString;
-    //添加的百分号什么的乱七八糟的
+    //如果要求编码的话，再这里进行编码
     if (request.shouldEncode) {
         urlString = [self encodeUrl:urlString];
     }
-
-    NSDictionary *parameters = request.parameters;
     
-    __block NSURLSessionTask *dateTask = nil;
+    NSDictionary*  parameters = request.parameters;//这个要跟服务端商量好
+    
+    __block NSURLSessionDataTask *dateTask = nil;
+    
     switch (request.method) {
         case WYBaseRequestMethodGet:{
             dateTask = [manager GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                
-                if (task&&responseObject) {
-                    [self handleRequestResult:task responseObject:responseObject error:nil];
+                if (request&&responseObject) {
+                    [self requestHandleSuccess:request responseObject:responseObject];
                 }
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                if (task&&error) {
-                    [self handleRequestResult:task responseObject:nil error:error];
+                if (request&&error) {
+                    [self requestHandleFailure:request error:error];
                 }
             }];
         }
@@ -96,22 +94,22 @@ static const char kBaseRequestConnectionKey;
                         });
                     }
                 } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    if (task&&responseObject) {
-                        [self handleRequestResult:task responseObject:responseObject error:nil];
+                    if (request&&responseObject) {
+                    [self requestHandleSuccess:request responseObject:responseObject];
                     }
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    if (task&&error) {
-                        [self handleRequestResult:task responseObject:nil error:error];
+                    if (request&&error) {
+                        [self requestHandleFailure:request error:error];
                     }
                 }];
             }else{
                 dateTask = [manager POST:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                    if (task&&responseObject) {
-                        [self handleRequestResult:task responseObject:responseObject error:nil];
+                    if (request&&responseObject) {
+                        [self requestHandleSuccess:request responseObject:responseObject];
                     }
                 } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                    if (task&&error) {
-                        [self handleRequestResult:task responseObject:nil error:error];
+                    if (request&&error) {
+                        [self requestHandleFailure:request error:error];
                     }
                 }];
             }
@@ -131,15 +129,31 @@ static const char kBaseRequestConnectionKey;
 
     WYNetworkConfig *defaultConfig = [WYNetworkConfig defaultConfig];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    // request
+    /*request
+     AFHTTPRequestSerializer是用于构建NSURLRequest的类，通过-init:方法进行初始化，指定编码方式为NSUTF-8。
+     HTTP请求分为请求头和请求体，请求头主要包含以下字段：
+     User-Agent、Pragma、Content-Type、Content-Length、Accept-Language、Accept、Accept-Encoding、Cookie 。
+     init方法，指定了请求头的Accept-Language，根据版本号、操作系统版本、设备屏幕scale等信息生成User-Agent，然后设置一些参数，
+     如HTTPMethodsEncodingParametersInURI包含了指定的HTTP method，mutableObservedChangedKeyPaths存放监听到的属性，
+     同时开始kvo监听。接着判断当前http请求的method是否包含在HTTPMethodsEncodingParametersInURI中，如果是GET请求，则会将参
+     数拼在url后面，因为GET请求不设置http的request body。如果是POST请求，则将query字符串序列化成nsdata后，设置为http的
+     request body。
+     有两个子类继承了AFHTTPRequestSerializer类，即AFJSONRequestSerializer和AFPropertyListRequestSerializer，都重写
+     了父类的方法，下面看一下AFJSONRequestSerializer的方法：分析该方法，当http的method是POST类型时，
+     AFJSONRequestSerializer和父类的处理不同，该方法将parameters序列化为JSON数据，设置为http的请求体，且请求头的"Content-
+     Type"参数设置为"application/json"。
+     */
     if (request.requestSerializerType == WYBaseRequestSerializerTypeHttp) {
         manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     }else if(request.requestSerializerType == WYBaseRequestSerializerTypeJson){
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
-    manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
+    
+//  manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;//这个其实没有必要，AFHTTPRequestSerializer初始化的时候，已经设置过了。
+//  manager.requestSerializer.HTTPMethodsEncodingParametersInURI = [NSSet setWithArray:@[@"POST", @"GET", @"HEAD"]];//一般的服务器不推荐使用put和delete，所以这里就没有添加。这个设置是将post请求参数也拼接在url后面，注意AFHTTPRequestSerializer选择要注意。
+
     manager.requestSerializer.timeoutInterval = request.timeoutInterval ?: defaultConfig.defaultTimeoutInterval ?: 30;
+
     NSDictionary *headers = [self headersWithRequest:request];
     [headers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         if ([key isKindOfClass:[NSString class]] && [obj isKindOfClass:[NSString class]]) {
@@ -162,29 +176,13 @@ static const char kBaseRequestConnectionKey;
     }
     
     NSSet *acceptableContentTypes = request.acceptableContentTypes ?: defaultConfig.defaultAcceptableContentTypes;
+    
     if (acceptableContentTypes) {
         manager.responseSerializer.acceptableContentTypes = acceptableContentTypes;
     }
     // 设置允许同时最大并发数量，过大容易出问题
     manager.operationQueue.maxConcurrentOperationCount = 5;
     return manager;
-}
-
-- (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject error:(NSError *)error {
-    WYBaseRequest *request;
-    @synchronized(self) {
-         request = [WYNetworkManager sharedManager].requestsRecord[@(task.taskIdentifier)];
-    }
-    if (!request) {
-        return;
-    }
-    if (responseObject) {
-     [self requestHandleSuccess:request responseObject:responseObject];
-    }
-    
-    if (error) {
-    [self requestHandleFailure:request error:error];
-    }
 }
 
 - (void)requestHandleSuccess:(WYBaseRequest *)request responseObject:(id)object{
@@ -217,7 +215,6 @@ static const char kBaseRequestConnectionKey;
     if (newString) {
         return newString;
     }
-    
     return url;
 }
 
@@ -243,5 +240,4 @@ static const char kBaseRequestConnectionKey;
         return responseData;
     }
 }
-
 @end

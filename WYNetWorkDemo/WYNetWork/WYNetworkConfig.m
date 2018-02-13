@@ -1,6 +1,6 @@
 //
 //  WYNetworkConfig.m
-//  ZJHNetwork
+//  WYNetwork
 //
 //  Created by yoowei on 16/6/1.
 //  Copyright © 2016年 yoowei. All rights reserved.
@@ -24,6 +24,6 @@
     self.additionalHeaders = @{};
     self.defaultTimeoutInterval = 25;
     self.defaultAcceptableStatusCodes  = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];
-    self.defaultAcceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/xml", @"text/plain", @"text/json", @"text/javascript", @"image/png", @"image/jpeg", @"application/json",@"image/*", nil];
+    self.defaultAcceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/xml", @"text/plain", @"text/json", @"text/javascript", @"image/png", @"image/jpeg", @"application/json",@"image/*",@"application/x-www-form-urlencoded", nil];
 }
 @end

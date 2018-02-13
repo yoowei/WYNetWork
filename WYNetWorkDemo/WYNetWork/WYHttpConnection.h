@@ -17,12 +17,12 @@ typedef void(^ConnectionSuccessBlock)(WYHttpConnection *connection, id responseJ
 typedef void(^ConnectionFailureBlock)(WYHttpConnection *connection, NSError *error);
 
 @interface WYBaseRequest (WYHttpConnection)
-@property (nonatomic, assign, readonly) WYHttpConnection *connection;
+@property (nonatomic, strong, readonly) WYHttpConnection *connection;
 @end
 
 @interface WYHttpConnection : NSObject
 @property (nonatomic, strong, readonly) WYBaseRequest *request;
-
+@property (nonatomic, strong, readwrite) NSURLSessionDataTask *task;
 + (instancetype)connection;
 - (NSURLSessionTask*)connectWithRequest:(WYBaseRequest *)request success:(ConnectionSuccessBlock)success failure:(ConnectionFailureBlock)failure;
 - (void)cancel;

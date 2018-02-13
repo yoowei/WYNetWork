@@ -6,9 +6,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <AFNetworking/AFNetworking.h>
-
-
 @interface WYDownLoadManager : NSObject
 typedef void(^WYResponseSuccess)(id response);
 typedef void(^WYResponseFail)(NSError *error);
