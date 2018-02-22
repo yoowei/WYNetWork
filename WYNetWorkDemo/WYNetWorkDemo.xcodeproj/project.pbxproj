@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		46A7DA1EC139EED83C27BC43 /* libPods-WYNetWorkDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */; };
 		6F350AACE61B5A376087E0DA /* libPods-WYNetWorkDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */; };
-		BA3159D22032C6550062B9AC /* WYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C52032C6550062B9AC /* WYBaseRequest.m */; };
-		BA3159D32032C6550062B9AC /* WYNetworkConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C62032C6550062B9AC /* WYNetworkConfig.m */; };
-		BA3159D42032C6550062B9AC /* WYNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159C72032C6550062B9AC /* WYNetworkManager.m */; };
-		BA3159D52032C6550062B9AC /* WYHttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159CA2032C6550062B9AC /* WYHttpConnection.m */; };
-		BA3159D62032C6550062B9AC /* WYDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */; };
-		BA3159D72032C6550062B9AC /* WYRequestHeadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */; };
 		BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */; };
 		BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B69B1E67FC6600EBE4D5 /* WYPublicTableViewController.m */; };
 		BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BA63B6EC1E68020300EBE4D5 /* WYPublicStatusCell.m */; };
@@ -61,19 +55,6 @@
 		962FB279DA91E515F34FCE03 /* libPods-WYNetWorkDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3D425BDDBCC4F45D2065BE /* libPods-WYNetWorkDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNetWorkDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0FCC3E8D40700E8DCEBACAB /* Pods-WYNetWorkDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNetWorkDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNetWorkDemoUITests/Pods-WYNetWorkDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BA3159C52032C6550062B9AC /* WYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYBaseRequest.m; sourceTree = "<group>"; };
-		BA3159C62032C6550062B9AC /* WYNetworkConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkConfig.m; sourceTree = "<group>"; };
-		BA3159C72032C6550062B9AC /* WYNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNetworkManager.m; sourceTree = "<group>"; };
-		BA3159C82032C6550062B9AC /* WYDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDownLoadManager.h; sourceTree = "<group>"; };
-		BA3159C92032C6550062B9AC /* WYRequestHeadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYRequestHeadTool.h; sourceTree = "<group>"; };
-		BA3159CA2032C6550062B9AC /* WYHttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYHttpConnection.m; sourceTree = "<group>"; };
-		BA3159CB2032C6550062B9AC /* WYNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetwork.h; sourceTree = "<group>"; };
-		BA3159CC2032C6550062B9AC /* WYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYBaseRequest.h; sourceTree = "<group>"; };
-		BA3159CD2032C6550062B9AC /* WYNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkManager.h; sourceTree = "<group>"; };
-		BA3159CE2032C6550062B9AC /* WYNetworkConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNetworkConfig.h; sourceTree = "<group>"; };
-		BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDownLoadManager.m; sourceTree = "<group>"; };
-		BA3159D02032C6550062B9AC /* WYHttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYHttpConnection.h; sourceTree = "<group>"; };
-		BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYRequestHeadTool.m; sourceTree = "<group>"; };
 		BA46F4CC1E5AE4950083EAAB /* WYTestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYTestRequest.h; sourceTree = "<group>"; };
 		BA46F4CD1E5AE4950083EAAB /* WYTestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYTestRequest.m; sourceTree = "<group>"; };
 		BA63B69A1E67FC6600EBE4D5 /* WYPublicTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPublicTableViewController.h; sourceTree = "<group>"; };
@@ -165,26 +146,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BA3159C42032C6550062B9AC /* WYNetWork */ = {
-			isa = PBXGroup;
-			children = (
-				BA3159C52032C6550062B9AC /* WYBaseRequest.m */,
-				BA3159C62032C6550062B9AC /* WYNetworkConfig.m */,
-				BA3159C72032C6550062B9AC /* WYNetworkManager.m */,
-				BA3159C82032C6550062B9AC /* WYDownLoadManager.h */,
-				BA3159C92032C6550062B9AC /* WYRequestHeadTool.h */,
-				BA3159CA2032C6550062B9AC /* WYHttpConnection.m */,
-				BA3159CB2032C6550062B9AC /* WYNetwork.h */,
-				BA3159CC2032C6550062B9AC /* WYBaseRequest.h */,
-				BA3159CD2032C6550062B9AC /* WYNetworkManager.h */,
-				BA3159CE2032C6550062B9AC /* WYNetworkConfig.h */,
-				BA3159CF2032C6550062B9AC /* WYDownLoadManager.m */,
-				BA3159D02032C6550062B9AC /* WYHttpConnection.h */,
-				BA3159D12032C6550062B9AC /* WYRequestHeadTool.m */,
-			);
-			path = WYNetWork;
-			sourceTree = "<group>";
-		};
 		BA46F4CB1E5AE4040083EAAB /* requestTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,7 +203,6 @@
 		BAE0AFF51E56C18E005969F7 = {
 			isa = PBXGroup;
 			children = (
-				BA3159C42032C6550062B9AC /* WYNetWork */,
 				BAE0B0001E56C18E005969F7 /* WYNetWorkDemo */,
 				BAE0B01A1E56C18F005969F7 /* WYNetWorkDemoTests */,
 				BAE0B0251E56C18F005969F7 /* WYNetWorkDemoUITests */,
@@ -612,21 +572,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA63B6ED1E68020300EBE4D5 /* WYPublicStatusCell.m in Sources */,
-				BA3159D22032C6550062B9AC /* WYBaseRequest.m in Sources */,
 				BAE0B0091E56C18E005969F7 /* WYViewController.m in Sources */,
 				BAE552221E6EAE0700501C50 /* WYPublicDetailViewController.m in Sources */,
 				BAE0B0061E56C18E005969F7 /* AppDelegate.m in Sources */,
-				BA3159D42032C6550062B9AC /* WYNetworkManager.m in Sources */,
 				BA63B6F31E68036000EBE4D5 /* WYPublicStatusModel.m in Sources */,
-				BA3159D32032C6550062B9AC /* WYNetworkConfig.m in Sources */,
 				BAE5522E1E6EBD7900501C50 /* NSString+Extension.m in Sources */,
 				BA63B6F91E68174900EBE4D5 /* WYPublicRequest.m in Sources */,
 				BA63B6FE1E69145100EBE4D5 /* WYPublicWeiboViewModel.m in Sources */,
 				BA46F4CE1E5AE4950083EAAB /* WYTestRequest.m in Sources */,
 				BAE0B0031E56C18E005969F7 /* main.m in Sources */,
-				BA3159D72032C6550062B9AC /* WYRequestHeadTool.m in Sources */,
-				BA3159D62032C6550062B9AC /* WYDownLoadManager.m in Sources */,
-				BA3159D52032C6550062B9AC /* WYHttpConnection.m in Sources */,
 				BA63B6A61E67FC6600EBE4D5 /* WYPublicTableViewController.m in Sources */,
 				BA63B7011E69160700EBE4D5 /* WYBaseViewModel.m in Sources */,
 			);
