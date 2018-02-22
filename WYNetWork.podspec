@@ -23,7 +23,7 @@ WYNetWork基于AFNetWorking 3.1.0重新封装的一款轻量级网络工具。 �
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author             = { "yoowei" => "wyhist2012@126.com" }
   s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/yoowei/WYNetWork.git", :tag => "#{s.version}" }
   s.source_files  = "WYNetWork", "WYNetWork/**/*.{h,m}"
   s.dependency "AFNetworking", "~> 3.1.0"
