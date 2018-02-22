@@ -30,7 +30,7 @@
     
     
     UIButton *testBtnMVVM=  [UIButton buttonWithType:UIButtonTypeCustom];
-    testBtnMVVM.frame=CGRectMake(200, 300, 100, 100);
+    testBtnMVVM.frame=CGRectMake(100, 300, 100, 100);
     [testBtnMVVM setTitle:@"MVVM测试" forState:UIControlStateNormal];
     [testBtnMVVM setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [testBtnMVVM addTarget:self action:@selector(MVVMTest) forControlEvents:UIControlEventTouchDown];
